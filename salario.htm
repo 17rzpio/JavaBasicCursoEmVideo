@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js_04_salario.htm - aninhamento de if</title>
+	<meta http-equiv="Content-Type" content="text/html; charset =utf-8" >
+	<meta charset="utf-8"/>
+</head>
+<body>
+	<script language="JavaScript">
+		var salario;
+
+		salario=parseInt(window.prompt('Digite seu salario: ', '00'));
+
+		if(salario<=1000){
+			document.write('<b>salario minimo</b>');
+		}else if (salario > 1000 && salario <=2000){
+			document.write('<b>até dois salarios minimos</b>');
+		}else {
+			document.write('<b>bom salario</b>');
+		}
+
+		var horaSalario;
+		var js_vht; //valor da hora trabalhada
+		var js_vdi; //valor do desconto do inss
+		var js_sl; //valor do sario liquido
+
+		horaSalario=parseFloat(window.prompt('Digite quantas horas trabalhadas ', '00'));
+		js_vht = parseFloat(window.prompt('Digite qual valor da hora: ', '00'));
+		js_vdi = parseFloat(window.prompt('Digite o valor do desconto do INSS', '00'));
+
+		if(horaSalario > 180){
+			document.write('<b>valor maximo de horas</b>');
+		}if(horaSalario < 135){
+			document.write ('........<b>valor minimo de horas</b>');
+		}
+
+		if(js_vht > 50){
+			document.write('<b>...valor máximo excedido</b>');
+		}if(js_vht<25){
+			document.write('.....<b> valor mínimo invalido</b>');
+		}
+
+		if(js_vdi>15){
+			document.write('...</b> valor máximo de desconto<b>');
+		}if(js_vdi<5){
+			document.write('...</b> valor mínimo de desconto<b>');
+		}
+
+		salario=horaSalario*js_vht;
+		js_sl = salario - (salario*(js_vdi/100));
+
+		if(js_sl<=1000){
+			document.write('salario minimo');
+		}else if (js_sl > 1000 && js_sl <=2000){
+			document.write('até dois salarios minimos');
+		}else {
+			document.write('bom salario');
+		}
+</script>
+</body>
+</html>

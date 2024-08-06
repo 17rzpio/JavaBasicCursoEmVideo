@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js_04 switchcase.htm - Uso do SwitchCase</title>
+	<meta http-equiv="Content-Type" content= "text/html ; utf-8">
+	<meta charset="utf-8"/>
+</head>
+<body>
+<script language= "JavaScript">
+	var salario;
+	salario = parseInt(window.prompt('Digite salário: ', '00'));
+	switch(salario){
+		case 1000: document.write('<b>salario minimo</b>'); 
+		break;
+		case 2000: document.write('<b>até dois salários mínimos</b>');
+		break;
+		default: document.write('<b>mais que dois salários mínimos</b>'); break;
+	}
+</script>
+</body>
+</html>
